@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKstillDreamin' — Neo Heroes Virtual Idol Band</title>
+    <meta name="description" content="역사 속 영웅이 미래 아이돌로 귀환하다. AKstillDreamin' 버추얼 휴먼 아이돌 밴드 공식 기획서">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">AKstillDreamin'</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero">HOME</a></li>
+                <li><a href="#overview">OVERVIEW</a></li>
+                <li><a href="#members">MEMBERS</a></li>
+                <li><a href="#album">ALBUM</a></li>
+                <li><a href="#market">MARKET</a></li>
+                <li><a href="#roadmap">ROADMAP</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="particles"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">EST. 2026</div>
+            <h1 class="hero-title">
+                <span class="title-line">AKstillDreamin'</span>
+            </h1>
+            <p class="hero-subtitle-en">NEO HEROES FROM HISTORY. IDOLS FROM THE FUTURE.</p>
+            <p class="hero-subtitle-kr">역사 속 영웅이 미래 아이돌로 귀환하다</p>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="section overview-section" id="overview">
+        <div class="container">
+            <h2 class="section-title">PROJECT OVERVIEW</h2>
+            <div class="section-divider"></div>
+            
+            <div class="overview-grid">
+                <div class="glass-card" data-aos="fade-up">
+                    <div class="card-icon">🎭</div>
+                    <h3 class="card-title">CONCEPT</h3>
+                    <p class="card-content">네오 히어로 (Neo Hero) — 한국 역사 속 위인들의 이름과 정신을 계승한 7인의 버추얼 아이돌이 밴드 연주와 퍼포먼스(댄스)를 동시에 소화하는 하이브리드 엔터테인먼트 프로젝트</p>
+                </div>
+
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">🌐</div>
+                    <h3 class="card-title">FORMAT</h3>
+                    <p class="card-content">버추얼 휴먼 + 밴드 + K팝 퍼포먼스의 3-way 하이브리드. 7명의 남성 멤버 + 여성 게스트 AI 'LA'</p>
+                </div>
+
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">🎵</div>
+                    <h3 class="card-title">DEBUT</h3>
+                    <p class="card-content">1st Mini Album — 수록곡 4트랙: Manifesto (타이틀), Mamaboy2026, My Nostalgia Lady, ChukkaSong</p>
+                </div>
+
+                <div class="glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">🔮</div>
+                    <h3 class="card-title">VISION</h3>
+                    <p class="card-content">글로벌 버추얼 아이돌 시장을 선도하는 차세대 K팝 버추얼 밴드. 역사적 서사 + 미래 기술의 융합</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="section members-section" id="members">
+        <div class="container">
+            <h2 class="section-title">MEMBERS — THE NEO HEROES</h2>
+            <div class="section-divider"></div>
+            
+            <div class="members-grid">
+                <!-- AK -->
+                <div class="member-card" data-aos="fade-up" data-color="#0044aa">
+                    <div class="member-image-wrapper">
+                        <img src="images/members/ak-final.jpg?v=9" alt="AK" class="member-image">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">AK</h3>
+                        <p class="member-name-en">AK (Adrian K)</p>
+                        <p class="member-role">메인 보컬 / 기타 / 키보드 / 작곡 / 프로듀싱</p>
+                        <p class="member-motif">프로젝트 원년 멤버, 팀의 정신적 지주</p>
+                        <p class="member-concept">안경을 쓴 지적이고 세련된 뮤지션. 프로듀서 겸 아티스트의 차분한 카리스마. 블랙 블레이저에 실버 목걸이. 유리 너머로 보이는 깊은 통찰의 눈빛.</p>
+                        <div class="member-color-tag" style="background: #0044aa;">지성의 블루</div>
+                    </div>
+                </div>
+
+                <!-- 세종 -->
+                <div class="member-card" data-aos="fade-up" data-aos-delay="100" data-color="#c8a000">
+                    <div class="member-image-wrapper">
+                        <img src="images/members/sejong.jpg" alt="세종" class="member-image">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">세종</h3>
+                        <p class="member-name-en">SEJONG</p>
+                        <p class="member-role">키보드 / 보컬</p>
+                        <p class="member-motif">세종대왕 — 창조와 문명의 아이콘</p>
+                        <p class="member-concept">우아하고 고급스러운 클래식 아이돌. 실크 셔츠와 세련된 액세서리. 키보드 앞에 앉은 자태에서 왕의 품격이 느껴지는 고귀한 분위기. 따뜻한 황금빛 조명.</p>
+                        <div class="member-color-tag" style="background: #c8a000;">문명의 금빛</div>
+                    </div>
+                </div>
+
+                <!-- 순신 -->
+                <div class="member-card" data-aos="fade-up" data-aos-delay="200" data-color="#003366">
+                    <div class="member-image-wrapper">
+                        <img src="images/members/sunsin.jpg" alt="순신" class="member-image">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">순신</h3>
+                        <p class="member-name-en">SUNSIN</p>
+                        <p class="member-role">보컬 / 베이스</p>
+                        <p class="member-motif">이순신 장군 — 불굴의 의지와 전략</p>
+                        <p class="member-concept">다크 네이비 밀리터리 재킷에 금색 트리밍. 베이스 기타를 무기처럼 다루는 강렬한 포즈. 파도와 바다를 연상시키는 청남색 배경. 압도적인 존재감과 굳건한 눈빛.</p>
+                        <div class="member-color-tag" style="background: #003366;">심해의 남색</div>
+                    </div>
+                </div>
+
+                <!-- Getto -->
+                <div class="member-card" data-aos="fade-up" data-aos-delay="300" data-color="#ff4400">
+                    <div class="member-image-wrapper">
+                        <img src="images/members/getto.jpg" alt="게토" class="member-image">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">게토</h3>
+                        <p class="member-name-en">GETTO</p>
+                        <p class="member-role">래퍼 / 보컬</p>
+                        <p class="member-motif">자유와 저항의 정신</p>
+                        <p class="member-concept">거칠고 자유분방한 스트릿 패션. 사이버펑크 요소가 가미된 비주얼. 네온 조명과 홀로그래픽 요소가 어우러진 어두운 도시 배경. 체인과 실버 액세서리.</p>
+                        <div class="member-color-tag" style="background: #ff4400;">반항의 레드</div>
+                    </div>
+                </div>
+
+                <!-- 치우 -->
+                <div class="member-card" data-aos="fade-up" data-aos-delay="400" data-color="#cc2200">
+                    <div class="member-image-wrapper">
+                        <img src="images/members/chiwoo.jpg" alt="치우" class="member-image">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">치우</h3>
+                        <p class="member-name-en">CHIWOO</p>
+                        <p class="member-role">보컬 / 메인 기타</p>
+                        <p class="member-motif">치우천왕 — 전쟁의 신, 원초적 에너지</p>
+                        <p class="member-concept">거칠고 강렬한 에너지의 메인 기타리스트. 와일드한 헤어와 강렬한 눈빛. 사이버펑크 스트릿 패션에 전투적 요소 가미. 전기기타를 치켜드는 역동적인 포즈.</p>
+                        <div class="member-color-tag" style="background: #cc2200;">전쟁의 진홍</div>
+                    </div>
+                </div>
+
+                <!-- 단군 -->
+                <div class="member-card" data-aos="fade-up" data-aos-delay="500" data-color="#664400">
+                    <div class="member-image-wrapper">
+                        <img src="images/members/dangoon.jpg?v=2" alt="단군" class="member-image">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">단군</h3>
+                        <p class="member-name-en">DANGOON</p>
+                        <p class="member-role">드럼 / 보컬</p>
+                        <p class="member-motif">단군왕검 — 한민족의 시조, 대지와 하늘의 연결</p>
+                        <p class="member-concept">원시적 에너지와 현대 스타일의 융합. 부족적 패턴과 흙빛 컬러의 의상. 드럼 스틱을 든 강렬한 포즈. 타투 같은 패턴이 새겨진 팔. 산과 숲을 배경으로 한 신화적 분위기.</p>
+                        <div class="member-color-tag" style="background: #664400;">대지의 갈색</div>
+                    </div>
+                </div>
+
+                <!-- 보고 -->
+                <div class="member-card" data-aos="fade-up" data-aos-delay="600" data-color="#006644">
+                    <div class="member-image-wrapper">
+                        <img src="images/members/bogo.jpg?v=2" alt="보고" class="member-image">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">보고</h3>
+                        <p class="member-name-en">BOGO</p>
+                        <p class="member-role">바이올린 / 하모니카 / 색소폰 / 보컬</p>
+                        <p class="member-motif">장보고 — 해상왕, 개척과 교류의 정신</p>
+                        <p class="member-concept">우아하고 고급스러운 클래식 아이돌. 바이올린을 우아하게 연주하는 자태. 실크 셔츠와 세련된 액세서리. 따뜻한 황금빛과 바다 빛이 교차하는 배경. 국제적 세련미.</p>
+                        <div class="member-color-tag" style="background: #006644;">바다의 청록</div>
+                    </div>
+                </div>
+
+                <!-- LA -->
+                <div class="member-card special-guest" data-aos="fade-up" data-aos-delay="700" data-color="#00ffcc">
+                    <div class="special-badge">SPECIAL GUEST AI</div>
+                    <div class="member-image-wrapper">
+                        <img src="images/members/la.jpg?v=2" alt="LA" class="member-image">
+                        <div class="member-glow"></div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">LA</h3>
+                        <p class="member-name-en">LA (Lumina Angel)</p>
+                        <p class="member-role">게스트 AI 보컬 / 댄스</p>
+                        <p class="member-motif">미래에서 온 AI 존재</p>
+                        <p class="member-concept">쿨뷰티 K-pop 아이돌 스타일. 샤프하고 세련된 이목구비, 창백한 완벽한 피부, 강렬한 시선. 실버-화이트 헤어에 트렌디하고 엣지있는 스타일링. 모던한 크롭탑 또는 미래형 재킷, Gen-Z 하이패션 스트릿웨어.</p>
+                        <div class="member-color-tag" style="background: #00ffcc;">AI 쿨뷰티</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Album Section -->
+    <section class="section album-section" id="album">
+        <div class="container">
+            <h2 class="section-title">2026 DISCOGRAPHY</h2>
+            <div class="section-divider"></div>
+            
+            <!-- 1st Mini Album - July -->
+            <div class="album-header" data-aos="zoom-in">
+                <div class="album-release-date">2026.07 RELEASE</div>
+                <div class="album-title-box">
+                    <h3 class="album-title">1st Mini Album — 'MANIFESTO'</h3>
+                </div>
+            </div>
+
+            <div class="tracklist">
+                <div class="track-item" data-aos="fade-right">
+                    <div class="track-number">TRACK 01</div>
+                    <div class="track-info">
+                        <h4 class="track-title">For A Better Day (타이틀곡) <span class="track-fire">🔥</span></h4>
+                        <p class="track-description">"더 나은 내일을 향한 희망의 선언. 웅장한 아레나와 퓨처팝의 조화."</p>
+                        <div class="track-tags">
+                            <span class="track-tag">[아레나]</span>
+                            <span class="track-tag">[퓨처팝]</span>
+                            <span class="track-tag">[희망]</span>
+                        </div>
+                        <div class="audio-player">
+                            <audio id="audio-1" src="music/for-a-better-day.mp3"></audio>
+                            <button class="play-btn" data-audio="audio-1">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progress-1"></div>
+                            </div>
+                            <span class="time-display" id="time-1">0:00 / 0:00</span>
+                            <button class="volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="track-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="track-number">TRACK 02</div>
+                    <div class="track-info">
+                        <h4 class="track-title">MY NOSTALGIA LADY</h4>
+                        <p class="track-description">"아름다운 기억 속 그녀를 향한 서정적 발라드 록. 시간을 넘어선 그리움과 사랑."</p>
+                        <div class="track-tags">
+                            <span class="track-tag">[발라드록]</span>
+                            <span class="track-tag">[서정]</span>
+                            <span class="track-tag">[감성]</span>
+                        </div>
+                        <div class="audio-player">
+                            <audio id="audio-2" src="music/my-nostalgia-lady.mp3"></audio>
+                            <button class="play-btn" data-audio="audio-2">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progress-2"></div>
+                            </div>
+                            <span class="time-display" id="time-2">0:00 / 0:00</span>
+                            <button class="volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2nd Mini Album - September -->
+            <div class="album-header" data-aos="zoom-in" style="margin-top: 80px;">
+                <div class="album-release-date">2026.09 RELEASE</div>
+                <div class="album-title-box">
+                    <h3 class="album-title">2nd Mini Album — 'NOSTALGIA'</h3>
+                </div>
+            </div>
+
+            <div class="tracklist">
+                <div class="track-item" data-aos="fade-right">
+                    <div class="track-number">TRACK 01</div>
+                    <div class="track-info">
+                        <h4 class="track-title">MAMABOY 2026 (타이틀곡) <span class="track-fire">🔥</span></h4>
+                        <p class="track-description">"K-pop 마마보이들의 세태를 신랄하게 비판하는 강렬한 메시지. 독립과 성장의 필요성을 외치는 사회 비판곡."</p>
+                        <div class="track-tags">
+                            <span class="track-tag">[힙합록]</span>
+                            <span class="track-tag">[사회비판]</span>
+                            <span class="track-tag">[메시지]</span>
+                        </div>
+                        <div class="audio-player">
+                            <audio id="audio-3" src="music/mamaboy2026.mp3"></audio>
+                            <button class="play-btn" data-audio="audio-3">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progress-3"></div>
+                            </div>
+                            <span class="time-display" id="time-3">0:00 / 0:00</span>
+                            <button class="volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="track-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="track-number">TRACK 02</div>
+                    <div class="track-info">
+                        <h4 class="track-title">CHUKKASONG (추카송)</h4>
+                        <p class="track-description">"축제와 에너지, 팬들과 함께하는 파티 앤섬. 모두가 하나되는 축복의 노래."</p>
+                        <div class="track-tags">
+                            <span class="track-tag">[파티팝]</span>
+                            <span class="track-tag">[업템포]</span>
+                            <span class="track-tag">[팬송]</span>
+                        </div>
+                        <div class="audio-player">
+                            <audio id="audio-4" src="music/chukka-song.mp3"></audio>
+                            <button class="play-btn" data-audio="audio-4">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progress-4"></div>
+                            </div>
+                            <span class="time-display" id="time-4">0:00 / 0:00</span>
+                            <button class="volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1st Full Album - December -->
+            <div class="album-header" data-aos="zoom-in" style="margin-top: 80px;">
+                <div class="album-release-date">2026.12 RELEASE</div>
+                <div class="album-title-box album-title-box-full">
+                    <h3 class="album-title">1st Full Album — 'FOR A BETTER DAY'</h3>
+                    <p class="album-subtitle">기존 4곡 + 신곡 5곡 = 총 9 TRACKS</p>
+                </div>
+            </div>
+
+            <div class="tracklist">
+                <div class="track-item track-item-full" data-aos="fade-right">
+                    <div class="track-badge">NEW</div>
+                    <div class="track-number">TRACK 05</div>
+                    <div class="track-info">
+                        <h4 class="track-title">Free Universe (타이틀곡) <span class="track-fire">🔥</span></h4>
+                        <p class="track-description">"자유로운 우주를 향한 선언. 경계 없는 세계와 무한한 가능성을 노래하는 정규앨범 타이틀곡."</p>
+                        <div class="track-tags">
+                            <span class="track-tag">[얼터너티브 락]</span>
+                            <span class="track-tag">[밴드팝]</span>
+                            <span class="track-tag">[자유]</span>
+                        </div>
+                        <div class="audio-player">
+                            <audio id="audio-5" src="music/free-universe.mp3"></audio>
+                            <button class="play-btn" data-audio="audio-5">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progress-5"></div>
+                            </div>
+                            <span class="time-display" id="time-5">0:00 / 0:00</span>
+                            <button class="volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="track-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="track-item track-item-full" data-aos="fade-right" data-aos-delay="100">
+                    <div class="track-badge">NEW</div>
+                    <div class="track-number">TRACK 06</div>
+                    <div class="track-info">
+                        <h4 class="track-title">Once A Gentle Boy</h4>
+                        <p class="track-description">"한때는 순수했던 소년의 이야기. 성장과 변화, 그리고 잃어버린 순수함에 대한 빅밴드 뮤지컬."</p>
+                        <div class="track-tags">
+                            <span class="track-tag">[빅밴드 뮤지컬]</span>
+                            <span class="track-tag">[서정]</span>
+                            <span class="track-tag">[성장]</span>
+                        </div>
+                        <div class="audio-player">
+                            <audio id="audio-6" src="music/once-a-gentle-boy.mp3"></audio>
+                            <button class="play-btn" data-audio="audio-6">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progress-6"></div>
+                            </div>
+                            <span class="time-display" id="time-6">0:00 / 0:00</span>
+                            <button class="volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="track-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="track-item track-item-full" data-aos="fade-right" data-aos-delay="200">
+                    <div class="track-badge">NEW</div>
+                    <div class="track-number">TRACK 07</div>
+                    <div class="track-info">
+                        <h4 class="track-title">Manifesto</h4>
+                        <p class="track-description">"꿈꾸는 세계를 향한 선언. AKstillDreamin'의 철학과 비전을 강렬하게 외치는 네오팝 밴드록."</p>
+                        <div class="track-tags">
+                            <span class="track-tag">[네오팝]</span>
+                            <span class="track-tag">[밴드록]</span>
+                            <span class="track-tag">[선언]</span>
+                        </div>
+                    </div>
+                    <div class="track-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="track-item track-item-full" data-aos="fade-right" data-aos-delay="300">
+                    <div class="track-badge">NEW</div>
+                    <div class="track-number">TRACK 08</div>
+                    <div class="track-info">
+                        <h4 class="track-title">K.I.B (King Is Back)</h4>
+                        <p class="track-description">"왕의 귀환. 역사 속 영웅들이 현대에 돌아온 이야기. 강렬한 힙합록과 오케스트라의 조화."</p>
+                        <div class="track-tags">
+                            <span class="track-tag">[힙합록]</span>
+                            <span class="track-tag">[에픽]</span>
+                            <span class="track-tag">[영웅]</span>
+                        </div>
+                    </div>
+                    <div class="track-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="track-item track-item-full" data-aos="fade-right" data-aos-delay="400">
+                    <div class="track-badge">NEW</div>
+                    <div class="track-number">TRACK 09</div>
+                    <div class="track-info">
+                        <h4 class="track-title">Eternity</h4>
+                        <p class="track-description">"영원을 향한 여정. 앨범을 마무리하는 장대한 서사시. 시간을 초월한 꿈과 희망의 메시지."</p>
+                        <div class="track-tags">
+                            <span class="track-tag">[에픽록]</span>
+                            <span class="track-tag">[오케스트라]</span>
+                            <span class="track-tag">[엔딩]</span>
+                        </div>
+                    </div>
+                    <div class="track-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Analysis Section -->
+    <section class="section market-section" id="market">
+        <div class="container">
+            <h2 class="section-title">MARKET ANALYSIS — 버추얼 아이돌 시장 전망</h2>
+            <div class="section-divider"></div>
+            
+            <div class="kpi-grid">
+                <div class="kpi-card" data-aos="zoom-in">
+                    <div class="kpi-icon">💰</div>
+                    <div class="kpi-value">$43.3B → $1.8T</div>
+                    <div class="kpi-label">글로벌 버추얼 휴먼 시장 (2023→2033)</div>
+                    <div class="kpi-source">Allied Market Research</div>
+                </div>
+
+                <div class="kpi-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="kpi-icon">📈</div>
+                    <div class="kpi-value">연평균 +36.4%</div>
+                    <div class="kpi-label">버추얼 휴먼 시장 성장률 (2021~2030)</div>
+                    <div class="kpi-source">Emergen Research</div>
+                </div>
+
+                <div class="kpi-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="kpi-icon">🇰🇷</div>
+                    <div class="kpi-value">약 17.6조원</div>
+                    <div class="kpi-label">K팝 가상 시장 규모 전망</div>
+                    <div class="kpi-source">업계 전망치</div>
+                </div>
+            </div>
+
+            <div class="market-comparison">
+                <div class="market-block market-opportunity" data-aos="fade-up">
+                    <h3 class="market-block-title">시장 기회</h3>
+                    <ul class="market-list">
+                        <li>• 버추얼 아이돌 = '영원한 청춘' — 스캔들·노화 없는 리스크 관리</li>
+                        <li>• 다국어/다문화 즉각 대응 — 글로벌 팬덤 동시 공략 가능</li>
+                        <li>• IP 확장성 — 게임·웹툰·메타버스 콘텐츠 연계 무제한</li>
+                        <li>• 팬과의 정서적 교감 기술 고도화 — AI 대화앱, 실시간 반응</li>
+                        <li>• 2026년 "투 트랙 전략" — 온라인 버추얼 + 오프라인 이벤트 병행</li>
+                    </ul>
+                </div>
+
+                <div class="market-block market-differentiation" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="market-block-title">AKstillDreamin 차별화 포인트</h3>
+                    <ul class="market-list">
+                        <li>🏆 역사 서사 기반 스토리텔링 — 단순 기술이 아닌 '이야기가 있는 아이돌'</li>
+                        <li>🎸 라이브 밴드 + K팝 퍼포먼스 하이브리드 — 시장 내 유일무이한 포맷</li>
+                        <li>👾 AI 게스트 'LA' — 인간(버추얼) + AI의 공존이라는 미래적 메시지</li>
+                        <li>🌏 한국 역사 IP — 글로벌 K-컬처 팬들에게 어필하는 강력한 문화 콘텐츠</li>
+                        <li>🎭 7인 각자의 뚜렷한 개성 — 팬덤 분화 전략으로 넓은 팬층 확보</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="section roadmap-section" id="roadmap">
+        <div class="container">
+            <h2 class="section-title">ROADMAP 2026</h2>
+            <div class="section-divider"></div>
+            
+            <div class="roadmap-timeline">
+                <div class="roadmap-item" data-aos="fade-up">
+                    <div class="roadmap-icon">🚀</div>
+                    <div class="roadmap-content">
+                        <h4 class="roadmap-period">2026.06 (6월)</h4>
+                        <p class="roadmap-description">프로젝트 공식 론칭 + 멤버 비주얼 공개 + 공식 SNS·팬클럽 오픈 + 데뷔 쇼케이스</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="roadmap-icon">🔥</div>
+                    <div class="roadmap-content">
+                        <h4 class="roadmap-period">2026.07 (7월)</h4>
+                        <p class="roadmap-description"><strong>1st Mini Album 'MANIFESTO' 발매</strong><br/>타이틀곡 'For A Better Day' (아레나, 퓨처팝) + 'MY NOSTALGIA LADY' MV 공개</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="roadmap-icon">💙</div>
+                    <div class="roadmap-content">
+                        <h4 class="roadmap-period">2026.09 (9월)</h4>
+                        <p class="roadmap-description"><strong>2nd Mini Album 'NOSTALGIA' 발매</strong><br/>타이틀곡 'MAMABOY 2026' (힙합록, 사회비판) + 'CHUKKASONG' MV 공개</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="roadmap-icon">🌐</div>
+                    <div class="roadmap-content">
+                        <h4 class="roadmap-period">2026.10 (10월)</h4>
+                        <p class="roadmap-description">첫 버추얼 온라인 콘서트 (글로벌 스트리밍) + 메타버스 플랫폼 입점 + 팬 소통 AI 앱 베타 출시</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="roadmap-icon">🏆</div>
+                    <div class="roadmap-content">
+                        <h4 class="roadmap-period">2026.12 (12월)</h4>
+                        <p class="roadmap-description"><strong>1st Full Album 'FOR A BETTER DAY' 발매</strong><br/>기존 4곡 + 신곡 5곡 (총 9트랙) / 타이틀곡 'Free Universe' (얼터너티브 락, 밴드팝) MV 공개<br/>연말 시상식 출연 + 연말 결산 쇼케이스</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="roadmap-icon">🏟️</div>
+                    <div class="roadmap-content">
+                        <h4 class="roadmap-period">2027 (내년)</h4>
+                        <p class="roadmap-description">오프라인 팝업 스토어 & 홀로그램 공연 투어<br/>2nd Full Album 제작 시작 + 해외 진출 본격화</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 class="footer-brand">AKstillDreamin'</h3>
+                    <p class="footer-slogan">"We Are Still Dreaming — 우리는 여전히 꿈꾼다"</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>© 2026 AKstillDreamin' Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

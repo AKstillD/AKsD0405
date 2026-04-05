@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKstillDreamin' 프로젝트 제안서</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=Orbitron:wght@700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .slide {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 40px;
+            position: relative;
+            page-break-after: always;
+        }
+        
+        /* Slide 1: Cover */
+        .slide-1 {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 100%);
+            text-align: center;
+        }
+        
+        .slide-1 .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 80px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f0c040 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 60px rgba(240, 192, 64, 0.6);
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+        }
+        
+        .slide-1 .slogan-en {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+        }
+        
+        .slide-1 .slogan-kr {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+        
+        .slide-1 .subtitle {
+            font-size: 24px;
+            color: #9945ff;
+            margin-top: 40px;
+        }
+        
+        /* Slide 2: Concept */
+        .slide-2 {
+            background: linear-gradient(135deg, #1a0a2e 0%, #0a0a1a 100%);
+        }
+        
+        .slide-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 48px;
+            color: #f0c040;
+            margin-bottom: 60px;
+            text-align: center;
+            text-shadow: 0 0 30px rgba(240, 192, 64, 0.6);
+        }
+        
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .concept-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(240, 192, 64, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .concept-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .concept-card h3 {
+            font-size: 28px;
+            color: #f0c040;
+            margin-bottom: 20px;
+        }
+        
+        .concept-card p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ccc;
+        }
+        
+        /* Slide 3: Members */
+        .slide-3 {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+        }
+        
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            width: 100%;
+        }
+        
+        .member-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .member-card:hover {
+            transform: translateY(-10px);
+            border-color: #00d4ff;
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.4);
+        }
+        
+        .member-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .member-card h3 {
+            font-size: 22px;
+            color: #f0c040;
+            margin-bottom: 5px;
+        }
+        
+        .member-card .role {
+            font-size: 14px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+        
+        .member-card .motif {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .special-guest {
+            border-color: #00ffcc;
+            background: rgba(0, 255, 204, 0.1);
+        }
+        
+        /* Slide 4: Albums */
+        .slide-4 {
+            background: linear-gradient(135deg, #1a0a2e 0%, #0a1a2e 100%);
+        }
+        
+        .albums-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .album-block {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(240, 192, 64, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .album-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .album-date {
+            font-size: 18px;
+            color: #00d4ff;
+            font-weight: 700;
+        }
+        
+        .album-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 32px;
+            color: #f0c040;
+        }
+        
+        .track-list {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .track-item {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid #00d4ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .track-item h4 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .track-item p {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+        
+        .audio-player {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .play-btn {
+            background: linear-gradient(135deg, #f0c040, #ff6b6b);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(240, 192, 64, 0.8);
+        }
+        
+        .play-btn.playing {
+            background: linear-gradient(135deg, #00d4ff, #9945ff);
+        }
+        
+        .progress-container {
+            flex: 1;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #f0c040, #00d4ff);
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s;
+        }
+        
+        .time-display {
+            font-size: 14px;
+            color: #999;
+            min-width: 100px;
+        }
+        
+        /* Slide 5: Market */
+        .slide-5 {
+            background: linear-gradient(135deg, #0a1a2e 0%, #1a0a2e 100%);
+        }
+        
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        
+        .kpi-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .kpi-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .kpi-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 36px;
+            color: #f0c040;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .kpi-label {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        
+        .kpi-source {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .differentiation {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(240, 192, 64, 0.1);
+            border: 2px solid #f0c040;
+            border-radius: 20px;
+            padding: 40px;
+        }
+        
+        .differentiation h3 {
+            font-size: 28px;
+            color: #f0c040;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .differentiation ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .differentiation li {
+            font-size: 16px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            border-left: 4px solid #f0c040;
+        }
+        
+        /* Slide 6: Roadmap */
+        .slide-6 {
+            background: linear-gradient(135deg, #1a0a2e 0%, #0a0a1a 100%);
+        }
+        
+        .roadmap-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .roadmap-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .roadmap-icon {
+            font-size: 60px;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .roadmap-content {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .roadmap-period {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            color: #f0c040;
+            margin-bottom: 15px;
+        }
+        
+        .roadmap-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #ccc;
+        }
+        
+        /* Slide 7: Contact */
+        .slide-7 {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 100%);
+            text-align: center;
+        }
+        
+        .final-message {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        
+        .final-slogan {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 32px;
+            background: linear-gradient(135deg, #f0c040 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 60px;
+        }
+        
+        .contact-info {
+            font-size: 20px;
+            color: #999;
+            line-height: 2;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+            font-size: 40px;
+        }
+        
+        .social-icons a {
+            color: #00d4ff;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #f0c040;
+            transform: scale(1.2);
+        }
+        
+        /* Navigation */
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .nav-dot.active {
+            background: #f0c040;
+            box-shadow: 0 0 20px rgba(240, 192, 64, 0.8);
+        }
+        
+        .page-number {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            font-family: 'Orbitron', sans-serif;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        @media print {
+            .nav-dots, .page-number {
+                display: none;
+            }
+            
+            .slide {
+                page-break-after: always;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .slide {
+                padding: 40px 20px;
+            }
+            
+            .slide-1 .logo {
+                font-size: 48px;
+            }
+            
+            .slide-1 .slogan-en {
+                font-size: 18px;
+            }
+            
+            .slide-1 .slogan-kr {
+                font-size: 20px;
+            }
+            
+            .slide-title {
+                font-size: 32px;
+            }
+            
+            .concept-grid,
+            .members-grid,
+            .kpi-grid,
+            .differentiation ul {
+                grid-template-columns: 1fr;
+            }
+            
+            .album-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+        <div class="nav-dot active" onclick="scrollToSlide(0)"></div>
+        <div class="nav-dot" onclick="scrollToSlide(1)"></div>
+        <div class="nav-dot" onclick="scrollToSlide(2)"></div>
+        <div class="nav-dot" onclick="scrollToSlide(3)"></div>
+        <div class="nav-dot" onclick="scrollToSlide(4)"></div>
+        <div class="nav-dot" onclick="scrollToSlide(5)"></div>
+        <div class="nav-dot" onclick="scrollToSlide(6)"></div>
+    </div>
+    
+    <div class="page-number">1 / 7</div>
+
+    <!-- Slide 1: Cover -->
+    <section class="slide slide-1">
+        <div class="logo">AKstillDreamin'</div>
+        <div class="slogan-en">NEO HEROES FROM HISTORY. IDOLS FROM THE FUTURE.</div>
+        <div class="slogan-kr">역사 속 영웅이 미래 아이돌로 귀환하다</div>
+        <div class="subtitle">버추얼 휴먼 아이돌 밴드 프로젝트 제안서</div>
+        <div class="subtitle" style="margin-top: 20px; font-size: 20px;">EST. 2026</div>
+    </section>
+
+    <!-- Slide 2: Concept -->
+    <section class="slide slide-2">
+        <h2 class="slide-title">PROJECT OVERVIEW</h2>
+        <div class="concept-grid">
+            <div class="concept-card">
+                <div class="concept-icon">🎭</div>
+                <h3>CONCEPT</h3>
+                <p>네오 히어로 (Neo Hero) — 한국 역사 속 위인들의 이름과 정신을 계승한 7인의 버추얼 아이돌이 밴드 연주와 퍼포먼스를 동시에 소화하는 하이브리드 엔터테인먼트</p>
+            </div>
+            <div class="concept-card">
+                <div class="concept-icon">🌐</div>
+                <h3>FORMAT</h3>
+                <p>버추얼 휴먼 + 밴드 + K팝 퍼포먼스의 3-way 하이브리드. 7명의 남성 멤버 + 여성 게스트 AI 'LA (Lumina Angel)'</p>
+            </div>
+            <div class="concept-card">
+                <div class="concept-icon">🎵</div>
+                <h3>2026 RELEASE</h3>
+                <p>7월: 1st Mini Album 'MANIFESTO'<br>9월: 2nd Mini Album 'NOSTALGIA'<br>12월: 1st Full Album 'FOR A BETTER DAY' (9곡)</p>
+            </div>
+            <div class="concept-card">
+                <div class="concept-icon">🔮</div>
+                <h3>VISION</h3>
+                <p>글로벌 버추얼 아이돌 시장을 선도하는 차세대 K팝 버추얼 밴드. 역사적 서사 + 미래 기술의 융합</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Members -->
+    <section class="slide slide-3">
+        <h2 class="slide-title">MEMBERS — THE NEO HEROES</h2>
+        <div class="members-grid">
+            <div class="member-card">
+                <img src="images/members/ak-final.jpg?v=9" alt="AK">
+                <h3>AK (Adrian K)</h3>
+                <div class="role">메인 보컬 / 기타 / 키보드 / 작곡 / 프로듀싱</div>
+                <div class="motif">프로젝트 원년 멤버</div>
+            </div>
+            <div class="member-card">
+                <img src="images/members/sejong.jpg" alt="세종">
+                <h3>세종 (SEJONG)</h3>
+                <div class="role">키보드 / 보컬</div>
+                <div class="motif">세종대왕 - 창조와 문명</div>
+            </div>
+            <div class="member-card">
+                <img src="images/members/sunsin.jpg" alt="순신">
+                <h3>순신 (SUNSIN)</h3>
+                <div class="role">보컬 / 베이스</div>
+                <div class="motif">이순신 - 불굴의 의지</div>
+            </div>
+            <div class="member-card">
+                <img src="images/members/getto.jpg" alt="게토">
+                <h3>게토 (GETTO)</h3>
+                <div class="role">래퍼 / 보컬</div>
+                <div class="motif">자유와 저항의 정신</div>
+            </div>
+            <div class="member-card">
+                <img src="images/members/chiwoo.jpg" alt="치우">
+                <h3>치우 (CHIWOO)</h3>
+                <div class="role">보컬 / 메인 기타</div>
+                <div class="motif">치우천왕 - 전쟁의 신</div>
+            </div>
+            <div class="member-card">
+                <img src="images/members/dangoon.jpg?v=2" alt="단군">
+                <h3>단군 (DANGOON)</h3>
+                <div class="role">드럼 / 보컬</div>
+                <div class="motif">단군왕검 - 한민족의 시조</div>
+            </div>
+            <div class="member-card">
+                <img src="images/members/bogo.jpg?v=2" alt="보고">
+                <h3>보고 (BOGO)</h3>
+                <div class="role">바이올린 / 하모니카 / 색소폰 / 보컬</div>
+                <div class="motif">장보고 - 해상왕</div>
+            </div>
+            <div class="member-card special-guest">
+                <img src="images/members/la.jpg?v=2" alt="LA">
+                <h3>LA (Lumina Angel)</h3>
+                <div class="role">게스트 AI 보컬 / 댄스</div>
+                <div class="motif">미래에서 온 AI 존재</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Albums & Music -->
+    <section class="slide slide-4">
+        <h2 class="slide-title">2026 DISCOGRAPHY</h2>
+        <div class="albums-container">
+            <!-- 1st Mini Album -->
+            <div class="album-block">
+                <div class="album-header">
+                    <div class="album-date">2026.07 RELEASE</div>
+                    <div class="album-title">1st Mini Album — 'MANIFESTO'</div>
+                </div>
+                <div class="track-list">
+                    <div class="track-item">
+                        <h4>TRACK 01. For A Better Day (타이틀곡) 🔥</h4>
+                        <p>"더 나은 내일을 향한 희망의 선언. 웅장한 아레나와 퓨처팝의 조화."</p>
+                        <div class="audio-player">
+                            <audio id="audio-1" src="music/for-a-better-day.mp3"></audio>
+                            <button class="play-btn" onclick="togglePlay('audio-1', this)">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container" onclick="seek(event, 'audio-1')">
+                                <div class="progress-bar" id="progress-1"></div>
+                            </div>
+                            <span class="time-display" id="time-1">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <h4>TRACK 02. MY NOSTALGIA LADY</h4>
+                        <p>"아름다운 기억 속 그녀를 향한 서정적 발라드 록"</p>
+                        <div class="audio-player">
+                            <audio id="audio-2" src="music/my-nostalgia-lady.mp3"></audio>
+                            <button class="play-btn" onclick="togglePlay('audio-2', this)">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container" onclick="seek(event, 'audio-2')">
+                                <div class="progress-bar" id="progress-2"></div>
+                            </div>
+                            <span class="time-display" id="time-2">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2nd Mini Album -->
+            <div class="album-block">
+                <div class="album-header">
+                    <div class="album-date">2026.09 RELEASE</div>
+                    <div class="album-title">2nd Mini Album — 'NOSTALGIA'</div>
+                </div>
+                <div class="track-list">
+                    <div class="track-item">
+                        <h4>TRACK 01. MAMABOY 2026 (타이틀곡) 🔥</h4>
+                        <p>"K-pop 마마보이들의 세태를 신랄하게 비판하는 강렬한 메시지. 독립과 성장의 필요성"</p>
+                        <div class="audio-player">
+                            <audio id="audio-3" src="music/mamaboy2026.mp3"></audio>
+                            <button class="play-btn" onclick="togglePlay('audio-3', this)">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container" onclick="seek(event, 'audio-3')">
+                                <div class="progress-bar" id="progress-3"></div>
+                            </div>
+                            <span class="time-display" id="time-3">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <h4>TRACK 02. CHUKKASONG (추카송)</h4>
+                        <p>"축제와 에너지, 팬들과 함께하는 파티 앤섬"</p>
+                        <div class="audio-player">
+                            <audio id="audio-4" src="music/chukka-song.mp3"></audio>
+                            <button class="play-btn" onclick="togglePlay('audio-4', this)">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container" onclick="seek(event, 'audio-4')">
+                                <div class="progress-bar" id="progress-4"></div>
+                            </div>
+                            <span class="time-display" id="time-4">0:00 / 0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Market Analysis -->
+    <section class="slide slide-5">
+        <h2 class="slide-title">MARKET ANALYSIS</h2>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-icon">💰</div>
+                <div class="kpi-value">$43.3B → $1.8T</div>
+                <div class="kpi-label">글로벌 버추얼 휴먼 시장</div>
+                <div class="kpi-source">2023 → 2033</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon">📈</div>
+                <div class="kpi-value">+36.4% CAGR</div>
+                <div class="kpi-label">시장 성장률</div>
+                <div class="kpi-source">2021~2030</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-icon">🇰🇷</div>
+                <div class="kpi-value">17.6조원</div>
+                <div class="kpi-label">K팝 가상 시장</div>
+                <div class="kpi-source">예상 규모</div>
+            </div>
+        </div>
+        
+        <div class="differentiation">
+            <h3>AKstillDreamin' 차별화 포인트</h3>
+            <ul>
+                <li>🏆 역사 서사 기반 스토리텔링 — 단순 기술이 아닌 '이야기가 있는 아이돌'</li>
+                <li>🎸 라이브 밴드 + K팝 퍼포먼스 하이브리드 — 시장 내 유일무이한 포맷</li>
+                <li>👾 AI 게스트 'LA' — 인간(버추얼) + AI의 공존이라는 미래적 메시지</li>
+                <li>🌏 한국 역사 IP — 글로벌 K-컬처 팬들에게 어필하는 강력한 문화 콘텐츠</li>
+                <li>🎭 7인 각자의 뚜렷한 개성 — 팬덤 분화 전략으로 넓은 팬층 확보</li>
+                <li>🎵 2026년 3개 앨범 발매 — 공격적이고 임팩트 있는 데뷔 전략</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Slide 6: Roadmap -->
+    <section class="slide slide-6">
+        <h2 class="slide-title">ROADMAP 2026</h2>
+        <div class="roadmap-container">
+            <div class="roadmap-item">
+                <div class="roadmap-icon">🚀</div>
+                <div class="roadmap-content">
+                    <h4 class="roadmap-period">2026.06 (6월)</h4>
+                    <p class="roadmap-description">프로젝트 공식 론칭 + 멤버 비주얼 공개 + 공식 SNS·팬클럽 오픈 + 데뷔 쇼케이스</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-icon">🔥</div>
+                <div class="roadmap-content">
+                    <h4 class="roadmap-period">2026.07 (7월)</h4>
+                    <p class="roadmap-description"><strong>1st Mini Album 'MANIFESTO' 발매</strong><br/>타이틀곡 'For A Better Day' (아레나, 퓨처팝) + 'MY NOSTALGIA LADY' MV 공개</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-icon">💙</div>
+                <div class="roadmap-content">
+                    <h4 class="roadmap-period">2026.09 (9월)</h4>
+                    <p class="roadmap-description"><strong>2nd Mini Album 'NOSTALGIA' 발매</strong><br/>타이틀곡 'MAMABOY 2026' (힙합록, 사회비판) + 'CHUKKASONG' MV 공개</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-icon">🌐</div>
+                <div class="roadmap-content">
+                    <h4 class="roadmap-period">2026.10 (10월)</h4>
+                    <p class="roadmap-description">첫 버추얼 온라인 콘서트 (글로벌 스트리밍) + 메타버스 플랫폼 입점 + 팬 소통 AI 앱 베타 출시</p>
+                </div>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-icon">🏆</div>
+                <div class="roadmap-content">
+                    <h4 class="roadmap-period">2026.12 (12월)</h4>
+                    <p class="roadmap-description"><strong>1st Full Album 'FOR A BETTER DAY' 발매</strong><br/>기존 4곡 + 신곡 5곡 (총 9트랙) / 타이틀곡 'Free Universe' (얼터너티브 락, 밴드팝) MV 공개<br/>연말 시상식 출연 + 연말 결산 쇼케이스</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Contact -->
+    <section class="slide slide-7">
+        <div class="final-message">We Are Still Dreaming</div>
+        <div class="final-slogan">우리는 여전히 꿈꾼다</div>
+        <div class="contact-info">
+            <p>AKstillDreamin' 프로젝트에 관심 가져주셔서 감사합니다.</p>
+            <p style="margin-top: 20px;">© 2026 AKstillDreamin' Project. All Rights Reserved.</p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </section>
+
+    <script>
+        let currentAudio = null;
+        let currentButton = null;
+
+        function togglePlay(audioId, button) {
+            const audio = document.getElementById(audioId);
+            const icon = button.querySelector('i');
+            
+            // Stop any currently playing audio
+            if (currentAudio && currentAudio !== audio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                if (currentButton) {
+                    currentButton.classList.remove('playing');
+                    currentButton.querySelector('i').className = 'fas fa-play';
+                }
+            }
+            
+            if (audio.paused) {
+                audio.play();
+                icon.className = 'fas fa-pause';
+                button.classList.add('playing');
+                currentAudio = audio;
+                currentButton = button;
+            } else {
+                audio.pause();
+                icon.className = 'fas fa-play';
+                button.classList.remove('playing');
+                currentAudio = null;
+                currentButton = null;
+            }
+        }
+
+        function seek(event, audioId) {
+            const audio = document.getElementById(audioId);
+            const container = event.currentTarget;
+            const clickX = event.offsetX;
+            const width = container.offsetWidth;
+            const duration = audio.duration;
+            
+            audio.currentTime = (clickX / width) * duration;
+        }
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // Update progress bars
+        document.querySelectorAll('audio').forEach((audio, index) => {
+            const progressBar = document.getElementById(`progress-${index + 1}`);
+            const timeDisplay = document.getElementById(`time-${index + 1}`);
+            
+            audio.addEventListener('timeupdate', () => {
+                const progress = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = progress + '%';
+                
+                const current = formatTime(audio.currentTime);
+                const duration = formatTime(audio.duration);
+                timeDisplay.textContent = `${current} / ${duration}`;
+            });
+            
+            audio.addEventListener('ended', () => {
+                const button = document.querySelector(`[onclick*="${audio.id}"]`);
+                button.classList.remove('playing');
+                button.querySelector('i').className = 'fas fa-play';
+                progressBar.style.width = '0%';
+                currentAudio = null;
+                currentButton = null;
+            });
+        });
+
+        // Navigation
+        function scrollToSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            slides[index].scrollIntoView({ behavior: 'smooth' });
+            
+            // Update nav dots
+            document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            // Update page number
+            document.querySelector('.page-number').textContent = `${index + 1} / 7`;
+        }
+
+        // Scroll observer for nav dots
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = Array.from(document.querySelectorAll('.slide')).indexOf(entry.target);
+                    document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                    });
+                    document.querySelector('.page-number').textContent = `${index + 1} / 7`;
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.slide').forEach(slide => {
+            observer.observe(slide);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const slides = document.querySelectorAll('.slide');
+            const currentIndex = Array.from(slides).findIndex(slide => {
+                const rect = slide.getBoundingClientRect();
+                return rect.top >= 0 && rect.top < window.innerHeight / 2;
+            });
+            
+            if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+                e.preventDefault();
+                if (currentIndex < slides.length - 1) {
+                    scrollToSlide(currentIndex + 1);
+                }
+            } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                e.preventDefault();
+                if (currentIndex > 0) {
+                    scrollToSlide(currentIndex - 1);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
